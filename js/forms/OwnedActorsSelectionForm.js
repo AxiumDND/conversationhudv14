@@ -25,7 +25,7 @@ export class OwnedActorsSelectionForm extends FormApplication {
 
     // filteredTokens.forEach((token) => {
     //   const actor = token.actor;
-    //   const linkedConversation = token["flags"]["conversationhudv14"]?.linkedConversation;
+    //   const linkedConversation = token["flags"]["conversation-hud"]?.linkedConversation;
 
     //   // Create a participant object that is used to display data inside the form
     //   const participant = {

@@ -10,11 +10,11 @@ export const registerHook = () => {
     if (game.settings.get(MODULE_NAME, ModuleSettings.enableSceneConversations)) {
       // TODO: Use proper sheet class from constants
       const conversations = game.journal.filter(
-        (entry) => foundry.utils.getProperty(entry, "flags.conversationhudv14.type") === "conversation-sheet"
+        (entry) => foundry.utils.getProperty(entry, "flags.conversation-hud.type") === "conversation-sheet"
       );
 
-      const linkedConversation = data.document["flags"]["conversationhudv14"]?.sceneConversation;
-      const sceneConversationVisibilityOff = data.document["flags"]["conversationhudv14"]?.sceneConversationVisibilityOff;
+      const linkedConversation = data.document["flags"]["conversation-hud"]?.sceneConversation;
+      const sceneConversationVisibilityOff = data.document["flags"]["conversation-hud"]?.sceneConversationVisibilityOff;
 
       const renderedHtml = await foundry.applications.handlebars.renderTemplate(
         "modules/conversationhudv14/templates/fragments/scene-conversation-data.hbs",

@@ -16,7 +16,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
     // Get document pages
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "faction-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "faction-sheet-data"
     );
 
     if (page) {
@@ -171,7 +171,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
   async #handleSaveChanges() {
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "faction-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "faction-sheet-data"
     );
 
     const dataToSave = {
@@ -185,7 +185,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
           text: { content: JSON.stringify(dataToSave) },
           name: "_chud_faction_data",
           flags: {
-            "conversationhudv14": { type: "faction-sheet-data" },
+            "conversation-hud": { type: "faction-sheet-data" },
           },
         },
       ]);
@@ -202,7 +202,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
   async #handleDiscardChanges() {
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "faction-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "faction-sheet-data"
     );
 
     if (!page) {

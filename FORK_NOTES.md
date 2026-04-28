@@ -35,11 +35,15 @@ Foundry resolves a module's runtime folder, socket namespace, settings namespace
 | Pattern | Replaced with |
 |---|---|
 | `modules/conversation-hud/` | `modules/conversationhudv14/` |
-| `"conversation-hud"` (quoted module id) | `"conversationhudv14"` |
-| `'conversation-hud'` | `'conversationhudv14'` |
-| `flags.conversation-hud.` | `flags.conversationhudv14.` |
-| `settings-config-conversation-hud.` | `settings-config-conversationhudv14.` |
+| `"conversation-hud"` (module id, e.g. socketlib registration) | `"conversationhudv14"` |
+| `settings-config-conversation-hud.` (settings DOM-id selectors) | `settings-config-conversationhudv14.` |
 | `"conversation-hud.migrationWizard"` (settings menu key) | `"conversationhudv14.migrationWizard"` |
+
+### Flag namespace deliberately *kept* as `conversation-hud`
+
+The document-flag namespace (e.g. `flags.conversation-hud.type`, `flags["conversation-hud"]`) was **kept identical to upstream** so existing v13 worlds can be opened in v14 without a data migration. Foundry doesn't require flag namespaces to match the module id — they're arbitrary strings.
+
+This means a journal entry created by upstream `conversation-hud` is readable by this fork. A side-effect is that if both modules were ever installed at once they'd share the same flag namespace; in practice that's a rare configuration and the data shape is identical.
 
 This affects, among others:
 - `js/constants/generic.js` — `MODULE_NAME` constant
@@ -63,12 +67,9 @@ These look related but are independent of the module id; renaming would have bro
 
 ## Migration / data compatibility
 
-Because the document-flag namespace was renamed (`flags.conversation-hud.*` → `flags.conversationhudv14.*`), worlds that previously used the upstream module will **not** automatically see their existing conversation/faction journal entries in this fork. Two options if a worlds-level migration is ever needed:
+Because the flag namespace is unchanged (see above), v13 worlds opened in v14 with this fork installed will see their existing conversation and faction journal entries normally. No data migration is required.
 
-1. Add a one-off migration step that copies `flags["conversation-hud"]` → `flags["conversationhudv14"]` on JournalEntry, JournalEntryPage, Scene, and Token documents.
-2. Or temporarily set `MODULE_NAME` back to `"conversation-hud"` and reverse the bulk rename (not recommended — defeats the point of side-by-side install).
-
-For new v14 worlds this is a non-issue.
+Module *settings* are stored under the new module id, so settings will need to be re-set after switching from upstream to this fork (or vice-versa).
 
 ## Foundry v14 compatibility status
 

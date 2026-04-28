@@ -3,7 +3,7 @@
   <div class="form-fields">
     <input
       type="checkbox"
-      name="flags.conversationhudv14.excludeFromBeingPulled"
+      name="flags.conversation-hud.excludeFromBeingPulled"
       {{checked excludeFromBeingPulled}}
     >
   </div>
@@ -13,7 +13,7 @@
 <div class="form-group">
   <label>{{localize 'CHUD.strings.linkedConversation.name'}}</label>
   <div class="form-fields">
-    <select name="flags.conversationhudv14.linkedConversation">
+    <select name="flags.conversation-hud.linkedConversation">
       {{selectOptions conversations selected=linkedConversation blank="" valueAttr="id" labelAttr="name"}}
     </select>
 

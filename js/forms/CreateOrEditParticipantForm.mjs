@@ -555,7 +555,7 @@ export class CreateOrEditParticipantForm extends HandlebarsApplicationMixin(Appl
           text: { content: JSON.stringify(dataToSave) },
           name: "_chud_faction_data",
           flags: {
-            "conversationhudv14": { type: "faction-sheet-data" },
+            "conversation-hud": { type: "faction-sheet-data" },
           },
         },
       ]);

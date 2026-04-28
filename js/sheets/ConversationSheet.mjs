@@ -30,7 +30,7 @@ export class ConversationSheet extends HandlebarsApplicationMixin(JournalEntrySh
 
     // Get document pages
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "conversation-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "conversation-sheet-data"
     );
 
     if (page) {
@@ -174,7 +174,7 @@ export class ConversationSheet extends HandlebarsApplicationMixin(JournalEntrySh
     if (game.ConversationHud) {
       // Get document pages
       const page = this.document.pages.find(
-        (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "conversation-sheet-data"
+        (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "conversation-sheet-data"
       );
 
       if (page) {
@@ -210,7 +210,7 @@ export class ConversationSheet extends HandlebarsApplicationMixin(JournalEntrySh
   async #handleSaveChanges() {
     // Get document pages
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "conversation-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "conversation-sheet-data"
     );
 
     if (!page) {
@@ -220,7 +220,7 @@ export class ConversationSheet extends HandlebarsApplicationMixin(JournalEntrySh
           text: { content: JSON.stringify(this.#conversationData) },
           name: "_chud_conversation_data",
           flags: {
-            "conversationhudv14": { type: "conversation-sheet-data" },
+            "conversation-hud": { type: "conversation-sheet-data" },
           },
         },
       ]);
@@ -237,7 +237,7 @@ export class ConversationSheet extends HandlebarsApplicationMixin(JournalEntrySh
 
   async #handleDiscardChanges() {
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "conversation-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "conversation-sheet-data"
     );
 
     if (!page) {
