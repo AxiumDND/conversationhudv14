@@ -2,7 +2,7 @@
   "id": "conversationhudv14",
   "title": "ConversationHUD v14",
   "description": "<p>A simple module that adds a nice HUD that display the portraits of all the characters present in a conversation. Foundry VTT v14 compatible fork of CristianVasile23/conversation-hud.</p>",
-  "version": "14.0.2",
+  "version": "14.0.3",
   "compatibility": {
     "minimum": "14",
     "verified": "14",
@@ -67,7 +67,7 @@
   "socket": true,
   "url": "https://github.com/AxiumDND/conversationhudv14",
   "manifest": "https://raw.githubusercontent.com/AxiumDND/conversationhudv14/main/module.json",
-  "download": "https://github.com/AxiumDND/conversationhudv14/releases/download/14.0.2/module.zip",
+  "download": "https://github.com/AxiumDND/conversationhudv14/releases/download/14.0.3/module.zip",
   "license": "LICENSE",
   "readme": "README.md",
   "media": [

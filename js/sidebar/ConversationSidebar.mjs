@@ -45,13 +45,27 @@ export class ConversationSidebar extends HandlebarsApplicationMixin(AbstractSide
   };
 
   static DEFAULT_OPTIONS = {
-    id: "conversation-sidebar",
+    // v14: id must match `tabName` so the sidebar tab button's `aria-controls="conversation"` resolves to this element.
+    id: "conversation",
     classes: ["sidebar-tab", "conversation-sidebar"],
     window: { title: "CHUD.strings.activeConversation" },
     position: {
       height: "auto",
     },
   };
+
+  // v14 ApplicationV2 attaches rendered apps to <body> by default. Sidebar tabs need to live inside #sidebar
+  // so Foundry's [data-tab] visibility system shows/hides us with the rest of the tabs.
+  _insertElement(element) {
+    const existing = document.getElementById(element.id);
+    if (existing) {
+      existing.replaceWith(element);
+      return;
+    }
+    const sidebar = document.querySelector("#sidebar");
+    if (sidebar) sidebar.appendChild(element);
+    else document.body.append(element);
+  }
 
   async _prepareContext(options) {
     const base = await super._prepareContext(options);
