@@ -14,7 +14,7 @@
 
   {{#switch conversationData.type}} 
     {{#case 'gm-controlled'}}
-      {{> "modules/conversation-hud/templates/sheets/conversation-sheet/content/gm-controlled-sheet-content.hbs" data=conversationData.conversation.data isGM=isGM}}
+      {{> "modules/conversationhudv14/templates/sheets/conversation-sheet/content/gm-controlled-sheet-content.hbs" data=conversationData.conversation.data isGM=isGM}}
     {{/case}} 
     {{#case 'default'}}
       {{!-- TODO: Add message type that is also localized --}}

@@ -44,7 +44,7 @@ export class CollectiveConversationParticipantsEditForm extends FormApplication 
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["form"],
       popOut: true,
-      template: "modules/conversation-hud/templates/forms/edit-collective-conversation-participating-users-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/edit-collective-conversation-participating-users-form.hbs",
       id: "collective-conversation-creation-form",
       title: game.i18n.localize("CHUD.actions.createConversation"),
       width: 685,

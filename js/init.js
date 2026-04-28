@@ -21,7 +21,7 @@ Hooks.once("ready", () => {
 // Socket initialization
 export let socket;
 Hooks.once("socketlib.ready", () => {
-  socket = socketlib.registerModule("conversation-hud");
+  socket = socketlib.registerModule("conversationhudv14");
 });
 
 Hooks.once("uiExtender.init", (uiExtender) => {

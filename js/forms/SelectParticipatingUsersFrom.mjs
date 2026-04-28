@@ -42,7 +42,7 @@ export class SelectParticipatingUsersFrom extends HandlebarsApplicationMixin(App
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/select-participating-users-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/select-participating-users-form.hbs",
     },
     footer: {
       template: "templates/generic/form-footer.hbs",

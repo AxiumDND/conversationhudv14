@@ -748,7 +748,7 @@ export class GmControlledConversation {
    */
   async #getConversationTemplate(conversationData) {
     return await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/conversations/gm-controlled/interface.hbs",
+      "modules/conversationhudv14/templates/conversations/gm-controlled/interface.hbs",
       {
         isGM: game.user.isGM,
         hasDock: checkIfCameraDockIsOnBottomOrTop(),
@@ -826,7 +826,7 @@ export class GmControlledConversation {
 
   async #updateActiveParticipantImage(index) {
     const template = await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/fragments/active-participant-content.hbs",
+      "modules/conversationhudv14/templates/fragments/active-participant-content.hbs",
       {
         displayParticipant: index === -1 ? false : true,
         displayNoParticipantBox: game.settings.get(MODULE_NAME, ModuleSettings.displayNoParticipantBox),

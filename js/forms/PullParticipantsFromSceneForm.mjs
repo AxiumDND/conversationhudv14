@@ -26,7 +26,7 @@ export class PullParticipantsFromSceneForm extends HandlebarsApplicationMixin(Ap
 
     // Filter through the tokens and keep only the ones that are not set to be excluded
     const filteredTokens = tokens.filter((token) => {
-      const excludeFromBeingPulled = token["flags"]["conversation-hud"]?.excludeFromBeingPulled;
+      const excludeFromBeingPulled = token["flags"]["conversationhudv14"]?.excludeFromBeingPulled;
       if (excludeFromBeingPulled) {
         return false;
       }
@@ -42,7 +42,7 @@ export class PullParticipantsFromSceneForm extends HandlebarsApplicationMixin(Ap
         return;
       }
 
-      const linkedConversation = token["flags"]["conversation-hud"]?.linkedConversation;
+      const linkedConversation = token["flags"]["conversationhudv14"]?.linkedConversation;
 
       // Create a participant object that is used to display data inside the form
       const participant = {
@@ -95,7 +95,7 @@ export class PullParticipantsFromSceneForm extends HandlebarsApplicationMixin(Ap
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/pull-scene-participants-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/pull-scene-participants-form.hbs",
       scrollable: [".scrollable"],
     },
     footer: {

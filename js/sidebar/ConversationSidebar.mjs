@@ -33,14 +33,14 @@ export class ConversationSidebar extends HandlebarsApplicationMixin(AbstractSide
 
   static PARTS = {
     header: {
-      template: "modules/conversation-hud/templates/sidebar/header.hbs",
+      template: "modules/conversationhudv14/templates/sidebar/header.hbs",
     },
     participants: {
-      template: "modules/conversation-hud/templates/sidebar/participants.hbs",
+      template: "modules/conversationhudv14/templates/sidebar/participants.hbs",
       scrollable: [".conversation-participants"],
     },
     footer: {
-      template: "modules/conversation-hud/templates/sidebar/footer.hbs",
+      template: "modules/conversationhudv14/templates/sidebar/footer.hbs",
     },
   };
 

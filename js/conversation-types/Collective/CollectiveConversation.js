@@ -472,7 +472,7 @@ export class CollectiveConversation {
     const currentParticipatingUserData = conversationData.participatingUsers.find((user) => user.id === currentUserID);
 
     return await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/conversations/collective/interface.hbs",
+      "modules/conversationhudv14/templates/conversations/collective/interface.hbs",
       {
         isGM: game.user.isGM,
         hasDock: checkIfCameraDockIsOnBottomOrTop(),
@@ -567,7 +567,7 @@ export class CollectiveConversation {
     }
 
     const conversationControls = await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/conversations/collective/controls.hbs",
+      "modules/conversationhudv14/templates/conversations/collective/controls.hbs",
       {
         isGM: game.user.isGM,
         isVisible: game.ConversationHud.conversationIsVisible,
@@ -610,7 +610,7 @@ export class CollectiveConversation {
     const participatingUserData = this.#conversationData.conversation.data.participatingUsers[userIndex];
 
     const template = await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/fragments/active-participant-content.hbs",
+      "modules/conversationhudv14/templates/fragments/active-participant-content.hbs",
       {
         displayParticipant: participantIndex === -1 ? false : true,
         participant: participantData,

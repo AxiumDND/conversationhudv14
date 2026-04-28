@@ -16,7 +16,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
     // Get document pages
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "faction-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "faction-sheet-data"
     );
 
     if (page) {
@@ -38,13 +38,13 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
   static PARTS = {
     header: {
-      template: "modules/conversation-hud/templates/sheets/faction-sheet/header.hbs",
+      template: "modules/conversationhudv14/templates/sheets/faction-sheet/header.hbs",
     },
     body: {
-      template: "modules/conversation-hud/templates/sheets/faction-sheet/body.hbs",
+      template: "modules/conversationhudv14/templates/sheets/faction-sheet/body.hbs",
     },
     footer: {
-      template: "modules/conversation-hud/templates/sheets/faction-sheet/footer.hbs",
+      template: "modules/conversationhudv14/templates/sheets/faction-sheet/footer.hbs",
     },
   };
 
@@ -171,7 +171,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
   async #handleSaveChanges() {
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "faction-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "faction-sheet-data"
     );
 
     const dataToSave = {
@@ -185,7 +185,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
           text: { content: JSON.stringify(dataToSave) },
           name: "_chud_faction_data",
           flags: {
-            "conversation-hud": { type: "faction-sheet-data" },
+            "conversationhudv14": { type: "faction-sheet-data" },
           },
         },
       ]);
@@ -202,7 +202,7 @@ export class FactionSheet extends HandlebarsApplicationMixin(JournalEntrySheet) 
 
   async #handleDiscardChanges() {
     const page = this.document.pages.find(
-      (p) => foundry.utils.getProperty(p, "flags.conversation-hud.type") === "faction-sheet-data"
+      (p) => foundry.utils.getProperty(p, "flags.conversationhudv14.type") === "faction-sheet-data"
     );
 
     if (!page) {

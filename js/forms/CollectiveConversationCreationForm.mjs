@@ -69,7 +69,7 @@ export class CollectiveConversationCreationForm extends HandlebarsApplicationMix
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/conversation-creation-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/conversation-creation-form.hbs",
     },
     footer: {
       template: "templates/generic/form-footer.hbs",
@@ -108,7 +108,7 @@ export class CollectiveConversationCreationForm extends HandlebarsApplicationMix
   //   return foundry.utils.mergeObject(super.defaultOptions, {
   //     classes: ["form"],
   //     popOut: true,
-  //     template: "modules/conversation-hud/templates/forms/conversation-creation-form.hbs",
+  //     template: "modules/conversationhudv14/templates/forms/conversation-creation-form.hbs",
   //     id: "collective-conversation-creation-form",
   //     title: game.i18n.localize("CHUD.actions.createConversation"),
   //     width: 685,

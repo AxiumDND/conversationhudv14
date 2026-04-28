@@ -105,10 +105,10 @@ export class CreateOrEditParticipantForm extends HandlebarsApplicationMixin(Appl
   static PARTS = {
     tabs: { template: "templates/generic/tab-navigation.hbs" },
     participant: {
-      template: "modules/conversation-hud/templates/forms/add-or-edit-conversation-participant/participant-tab.hbs",
+      template: "modules/conversationhudv14/templates/forms/add-or-edit-conversation-participant/participant-tab.hbs",
     },
     faction: {
-      template: "modules/conversation-hud/templates/forms/add-or-edit-conversation-participant/faction-tab.hbs",
+      template: "modules/conversationhudv14/templates/forms/add-or-edit-conversation-participant/faction-tab.hbs",
     },
     footer: {
       template: "templates/generic/form-footer.hbs",
@@ -497,7 +497,7 @@ export class CreateOrEditParticipantForm extends HandlebarsApplicationMixin(Appl
     // Create a prompt for saving the conversation, asking the users to introduce a name and to specify a folder
     const folders = game.folders.filter((f) => f.type === "JournalEntry" && f.displayed);
     const dialogContent = await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/forms/save-form.hbs",
+      "modules/conversationhudv14/templates/forms/save-form.hbs",
       {
         folders,
         // TODO: Localize
@@ -555,7 +555,7 @@ export class CreateOrEditParticipantForm extends HandlebarsApplicationMixin(Appl
           text: { content: JSON.stringify(dataToSave) },
           name: "_chud_faction_data",
           flags: {
-            "conversation-hud": { type: "faction-sheet-data" },
+            "conversationhudv14": { type: "faction-sheet-data" },
           },
         },
       ]);

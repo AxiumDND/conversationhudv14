@@ -153,7 +153,7 @@ export class ConversationHud extends EventTarget {
         // Create a prompt for saving the conversation, asking the users to introduce a name and to specify a folder
         const folders = game.folders.filter((f) => f.type === "JournalEntry" && f.displayed);
         const dialogContent = await foundry.applications.handlebars.renderTemplate(
-          "modules/conversation-hud/templates/forms/save-form.hbs",
+          "modules/conversationhudv14/templates/forms/save-form.hbs",
           {
             folders,
             // TODO: Localize

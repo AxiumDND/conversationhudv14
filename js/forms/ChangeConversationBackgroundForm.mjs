@@ -38,7 +38,7 @@ export class ChangeConversationBackgroundForm extends HandlebarsApplicationMixin
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/conversation-background-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/conversation-background-form.hbs",
     },
     footer: {
       template: "templates/generic/form-footer.hbs",

@@ -42,7 +42,7 @@ export class MigrationForm extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/migration-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/migration-form.hbs",
       scrollable: [".scrollable"],
     },
     footer: {

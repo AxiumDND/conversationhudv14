@@ -14,7 +14,7 @@ export function getConversationsToMigrate() {
   const DEFAULT_PARTICIPANT = {
     name: "Anonymous",
     displayName: true,
-    img: "modules/conversation-hud/img/silhouette.jpg",
+    img: "modules/conversationhudv14/img/silhouette.jpg",
     imgScale: 1,
     portraitAnchor: {
       vertical: "centerVertical",
@@ -37,7 +37,7 @@ export function getConversationsToMigrate() {
 
   for (const journal of game.journal) {
     const conversationPage = journal.pages.find(
-      (page) => page.flags?.["conversation-hud"]?.type === "conversation" || page.name === "Conversation Participants"
+      (page) => page.flags?.["conversationhudv14"]?.type === "conversation" || page.name === "Conversation Participants"
     );
 
     if (!conversationPage) continue;
@@ -195,7 +195,7 @@ export async function migrateConversations() {
           format: CONST.JOURNAL_ENTRY_PAGE_FORMATS.PLAIN_TEXT,
         },
         flags: {
-          "conversation-hud": {
+          "conversationhudv14": {
             type: "conversation-sheet-data",
           },
         },
@@ -203,7 +203,7 @@ export async function migrateConversations() {
 
       await journal.update({
         flags: {
-          "conversation-hud": {
+          "conversationhudv14": {
             type: "conversation-sheet",
           },
           core: {
@@ -251,7 +251,7 @@ export async function migrateFactions() {
           format: CONST.JOURNAL_ENTRY_PAGE_FORMATS.PLAIN_TEXT,
         },
         flags: {
-          "conversation-hud": {
+          "conversationhudv14": {
             type: "faction-sheet-data",
           },
         },
@@ -259,7 +259,7 @@ export async function migrateFactions() {
 
       await journal.update({
         flags: {
-          "conversation-hud": {
+          "conversationhudv14": {
             type: "faction-sheet",
           },
           core: {

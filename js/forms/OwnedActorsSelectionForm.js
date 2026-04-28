@@ -25,7 +25,7 @@ export class OwnedActorsSelectionForm extends FormApplication {
 
     // filteredTokens.forEach((token) => {
     //   const actor = token.actor;
-    //   const linkedConversation = token["flags"]["conversation-hud"]?.linkedConversation;
+    //   const linkedConversation = token["flags"]["conversationhudv14"]?.linkedConversation;
 
     //   // Create a participant object that is used to display data inside the form
     //   const participant = {
@@ -62,7 +62,7 @@ export class OwnedActorsSelectionForm extends FormApplication {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["form"],
       popOut: true,
-      template: `modules/conversation-hud/templates/forms/pull-scene-participants-form.hbs`,
+      template: `modules/conversationhudv14/templates/forms/pull-scene-participants-form.hbs`,
       id: "conversation-pull-participants",
       title: game.i18n.localize("CHUD.actions.pullParticipants"),
       width: 450,

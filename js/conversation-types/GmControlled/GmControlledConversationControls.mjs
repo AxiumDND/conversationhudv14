@@ -6,7 +6,7 @@ export class GmControlledConversationControls extends EmbeddedComponent {
   constructor() {
     super({
       id: "ui-conversation-controls",
-      template: "modules/conversation-hud/templates/conversations/gm-controlled/controls.hbs",
+      template: "modules/conversationhudv14/templates/conversations/gm-controlled/controls.hbs",
       target: "#ui-conversation-controls",
     });
   }

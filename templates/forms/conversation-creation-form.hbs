@@ -14,13 +14,13 @@
 
   {{#switch type}} 
     {{#case 'gm-controlled'}}
-      {{> "modules/conversation-hud/templates/forms/content/gm-controlled-conversation-creation-form-content.hbs"
+      {{> "modules/conversationhudv14/templates/forms/content/gm-controlled-conversation-creation-form-content.hbs"
         isGM=isGM
         participants=participants 
       }}
     {{/case}}
     {{#case 'collective'}}
-      {{> "modules/conversation-hud/templates/forms/content/collective-conversation-creation-form-content.hbs"
+      {{> "modules/conversationhudv14/templates/forms/content/collective-conversation-creation-form-content.hbs"
         isGM=isGM
       }}
     {{/case}} 

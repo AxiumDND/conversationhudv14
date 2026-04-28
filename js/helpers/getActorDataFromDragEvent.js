@@ -32,9 +32,9 @@ export async function getActorDataFromDragEvent(event) {
           let participant;
           switch (page.type) {
             case "text":
-              if (page.flags["conversation-hud"]) {
+              if (page.flags["conversationhudv14"]) {
                 // Handle text pages with the the CHUD flag
-                const pageType = page.flags["conversation-hud"].type;
+                const pageType = page.flags["conversationhudv14"].type;
                 if (pageType && pageType === "conversation-sheet-data") {
                   const conversationData = JSON.parse(page.text.content);
 

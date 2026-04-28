@@ -34,7 +34,7 @@ export class ConversationCreationForm extends HandlebarsApplicationMixin(Applica
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/conversation-creation-type-selection-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/conversation-creation-type-selection-form.hbs",
     },
   };
 

@@ -96,9 +96,9 @@ export const registerHook = () => {
     wrapLabeledSettingsInFieldset(
       section,
       [
-        "settings-config-conversation-hud.portraitStyle",
-        "settings-config-conversation-hud.portraitAnchorVertical",
-        "settings-config-conversation-hud.portraitAnchorHorizontal",
+        "settings-config-conversationhudv14.portraitStyle",
+        "settings-config-conversationhudv14.portraitAnchorVertical",
+        "settings-config-conversationhudv14.portraitAnchorHorizontal",
       ],
       "CHUD.settings.settingsSheetHeaders.portrait"
     );
@@ -106,48 +106,48 @@ export const registerHook = () => {
     wrapLabeledSettingsInFieldset(
       section,
       [
-        "settings-config-conversation-hud.displayAllParticipantsToPlayers",
-        "settings-config-conversation-hud.displayNoParticipantBox",
-        "settings-config-conversation-hud.blurAmount",
+        "settings-config-conversationhudv14.displayAllParticipantsToPlayers",
+        "settings-config-conversationhudv14.displayNoParticipantBox",
+        "settings-config-conversationhudv14.blurAmount",
       ],
       "CHUD.settings.settingsSheetHeaders.interface",
       {
-        "settings-config-conversation-hud.displayAllParticipantsToPlayers": "very-slim",
-        "settings-config-conversation-hud.displayNoParticipantBox": "very-slim",
+        "settings-config-conversationhudv14.displayAllParticipantsToPlayers": "very-slim",
+        "settings-config-conversationhudv14.displayNoParticipantBox": "very-slim",
       }
     );
 
     wrapLabeledSettingsInFieldset(
       section,
       [
-        "settings-config-conversation-hud.enableSpeakAs",
-        "settings-config-conversation-hud.enableMinimize",
-        "settings-config-conversation-hud.keepMinimize",
-        "settings-config-conversation-hud.clearActiveParticipantOnVisibilityChange",
-        "settings-config-conversation-hud.enableSceneConversations",
+        "settings-config-conversationhudv14.enableSpeakAs",
+        "settings-config-conversationhudv14.enableMinimize",
+        "settings-config-conversationhudv14.keepMinimize",
+        "settings-config-conversationhudv14.clearActiveParticipantOnVisibilityChange",
+        "settings-config-conversationhudv14.enableSceneConversations",
       ],
       "CHUD.settings.settingsSheetHeaders.features",
       {
-        "settings-config-conversation-hud.enableSpeakAs": "very-slim",
-        "settings-config-conversation-hud.enableMinimize": "very-slim",
-        "settings-config-conversation-hud.keepMinimize": "very-slim",
-        "settings-config-conversation-hud.clearActiveParticipantOnVisibilityChange": "very-slim",
-        "settings-config-conversation-hud.enableSceneConversations": "very-slim",
+        "settings-config-conversationhudv14.enableSpeakAs": "very-slim",
+        "settings-config-conversationhudv14.enableMinimize": "very-slim",
+        "settings-config-conversationhudv14.keepMinimize": "very-slim",
+        "settings-config-conversationhudv14.clearActiveParticipantOnVisibilityChange": "very-slim",
+        "settings-config-conversationhudv14.enableSceneConversations": "very-slim",
       }
     );
 
     wrapLabeledSettingsInFieldset(
       section,
       [
-        "settings-config-conversation-hud.activeParticipantFontSize",
-        "settings-config-conversation-hud.activeParticipantFactionFontSize",
+        "settings-config-conversationhudv14.activeParticipantFontSize",
+        "settings-config-conversationhudv14.activeParticipantFactionFontSize",
       ],
       "CHUD.settings.settingsSheetHeaders.fontSize"
     );
 
     wrapLabeledSettingsInFieldset(
       section,
-      ["conversation-hud.migrationWizard"],
+      ["conversationhudv14.migrationWizard"],
       "CHUD.settings.settingsSheetHeaders.dataMigration"
     );
 

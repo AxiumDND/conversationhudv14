@@ -1,12 +1,12 @@
 {
-  "id": "conversation-hud",
-  "title": "ConversationHUD",
-  "description": "<p>A simple module that adds a nice HUD that display the portraits of all the characters present in a conversation.</p>",
-  "version": "#{VERSION}#",
+  "id": "conversationhudv14",
+  "title": "ConversationHUD v14",
+  "description": "<p>A simple module that adds a nice HUD that display the portraits of all the characters present in a conversation. Foundry VTT v14 compatible fork of CristianVasile23/conversation-hud.</p>",
+  "version": "14.0.0",
   "compatibility": {
-    "minimum": "13",
-    "verified": "13",
-    "maximum": "13"
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
   },
   "authors": [
     {
@@ -65,11 +65,8 @@
     }
   ],
   "socket": true,
-  "url": "#{URL}#",
-  "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",
-  "license": "https://github.com/CristianVasile23/conversation-hud/blob/main/LICENSE",
-  "readme": "https://github.com/CristianVasile23/conversation-hud/blob/main/README.md",
+  "license": "LICENSE",
+  "readme": "README.md",
   "media": [
     {
       "type": "setup",
@@ -87,7 +84,7 @@
   "packs": [
     {
       "name": "chud-macro-compendium",
-      "label": "ConversationHUD Macros",
+      "label": "ConversationHUD v14 Macros",
       "path": "packs/chud-macro-compendium",
       "type": "Macro",
       "ownership": {

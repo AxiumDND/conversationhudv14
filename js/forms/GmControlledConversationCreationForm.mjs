@@ -64,7 +64,7 @@ export class GmControlledConversationCreationForm extends HandlebarsApplicationM
 
   static PARTS = {
     body: {
-      template: "modules/conversation-hud/templates/forms/conversation-creation-form.hbs",
+      template: "modules/conversationhudv14/templates/forms/conversation-creation-form.hbs",
       scrollable: [".scrollable"],
     },
     footer: {

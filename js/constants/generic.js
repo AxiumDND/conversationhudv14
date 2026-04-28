@@ -1,4 +1,4 @@
-export const MODULE_NAME = "conversation-hud";
+export const MODULE_NAME = "conversationhudv14";
 
 export const EMPTY_FACTION = {
   displayFaction: false,

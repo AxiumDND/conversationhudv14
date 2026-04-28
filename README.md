@@ -1,5 +1,11 @@
 ![Conversation HUD Logo](https://user-images.githubusercontent.com/51834117/224548529-6781a471-fed8-4d36-9119-f0df11b4d839.png)
 
+# ConversationHUD v14
+
+> **This is a Foundry VTT v14 compatible fork** of [CristianVasile23/conversation-hud](https://github.com/CristianVasile23/conversation-hud). The module id is `conversationhudv14` so it can be installed alongside the original. Versioning starts at `14.0.0` — the leading `14.` always denotes the target Foundry major version.
+>
+> See [FORK_NOTES.md](FORK_NOTES.md) for the complete list of naming and manifest differences from the upstream repo, and for the v14 audit status.
+
 # About
 
 Have you ever had scenes with multiple NPCs talking to each other but due to your limited voice acting capabilities the players got confused on who is speaking?

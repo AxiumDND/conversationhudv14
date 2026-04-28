@@ -10,7 +10,7 @@ export function setDefaultParticipantData(participant) {
   }
 
   if (participant.img === "") {
-    participant.img = "modules/conversation-hud/img/silhouette.jpg";
+    participant.img = "modules/conversationhudv14/img/silhouette.jpg";
   }
 
   if (participant.faction && participant.faction.displayFaction) {

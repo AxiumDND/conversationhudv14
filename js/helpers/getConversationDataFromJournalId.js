@@ -20,7 +20,7 @@ export function getConversationDataFromJournalId(journalId) {
 
   // Look for a page with conversation-sheet-data or faction-sheet-data flag
   const dataPage = journal.pages.find((page) => {
-    const pageType = foundry.utils.getProperty(page, "flags.conversation-hud.type");
+    const pageType = foundry.utils.getProperty(page, "flags.conversationhudv14.type");
     return pageType === "conversation-sheet-data" || pageType === "faction-sheet-data";
   });
 

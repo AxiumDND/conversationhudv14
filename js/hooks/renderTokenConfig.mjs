@@ -6,14 +6,14 @@ export const registerHook = () => {
   Hooks.on("renderTokenConfig", async (app, html, data) => {
     // TODO: Use proper sheet class from constants
     const conversations = game.journal.filter(
-      (entry) => foundry.utils.getProperty(entry, "flags.conversation-hud.type") === "conversation-sheet"
+      (entry) => foundry.utils.getProperty(entry, "flags.conversationhudv14.type") === "conversation-sheet"
     );
 
-    const excludeFromBeingPulled = data.document["flags"]["conversation-hud"]?.excludeFromBeingPulled || undefined;
-    const linkedConversation = data.document["flags"]["conversation-hud"]?.linkedConversation || undefined;
+    const excludeFromBeingPulled = data.document["flags"]["conversationhudv14"]?.excludeFromBeingPulled || undefined;
+    const linkedConversation = data.document["flags"]["conversationhudv14"]?.linkedConversation || undefined;
 
     const renderedHtml = await foundry.applications.handlebars.renderTemplate(
-      "modules/conversation-hud/templates/fragments/actor-linked-conversation-data.hbs",
+      "modules/conversationhudv14/templates/fragments/actor-linked-conversation-data.hbs",
       {
         excludeFromBeingPulled: excludeFromBeingPulled,
         conversations: conversations,
